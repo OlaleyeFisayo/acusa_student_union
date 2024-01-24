@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style/index.css" />
+    <link rel="stylesheet" href="./style/style.css" />
     <title>Acusa</title>
     <link
       rel="stylesheet"
@@ -14,26 +14,100 @@
     />
   </head>
   <body>
-    <nav class="homepage_navbar">
-      <h2>welcome to</h2>
-      <ul class="homepage_navbar_desktop_view">
-        <li><a href="./pages/aboutus.html">About Us</a></li>
-        <li><a href="./pages/contact.html">Contact Us</a></li>
-      </ul>
-      <button id="hamburger">
-        <i class="fa-solid fa-bars" style="color: #ffffff"></i>
-      </button>
-      <button id="close">
-        <i class="fa-solid fa-xmark" style="color: #ffffff"></i>
-      </button>
-      <ul class="homepage_navbar_mobile_view">
-        <li><a href="./pages/aboutus.html">About Us</a></li>
-        <li><a href="./pages/contact.html">Contact Us</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="navbar-content">
+        <p class="logo">ASUCA</p>
+        <ul class="nav-links">
+          <li><a href="..">Home</a></li>
+          <li><a href="./pages/blog.html">Blog</a></li>
+          <li><a href="./pages/aboutus.html">About Us</a></li>
+          <li><a href="./pages/services.html">Services</a></li>
+          <li><a href="./pages/contact.html">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
-    <main class="homepage_main"></main>
+    <main class="homepage_main">
+      <section id="welcome">
+        <div class="welcome-content">
+          <div class="firstImg">
+            <img src="./assets/homepage/one.png" alt="work station image" />
+          </div>
+          <div class="text-side">
+            <h1>Stay Connected with Ajayi Crowther Student Union</h1>
+            <div class="search-container">
+              <input type="text" placeholder="Search for services" />
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+          </div>
+          <div class="secondImg">
+            <img src="./assets/homepage/Image.png" alt="handshake image" />
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <div class="services-content">
+          <section class="toggle">
+            <h1>Explore Our Services</h1>
+            <button class="down-button hidden" onclick="showServices()">
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <button class="up-button" onclick="hideServices()">
+              <i class="fa-solid fa-chevron-up"></i>
+            </button>
+          </section>
+          <section class="services-rendered">
+            <div class="service">
+              <img src="./assets/homepage/Image1.png" alt="Guy on a laptop" />
+              <h1>Step 1</h1>
+              <p>
+                Find Information, Browse through our website to find information
+                about the student association, events, services
+              </p>
+            </div>
+            <div class="service">
+              <img
+                src="./assets/homepage/Image2.png"
+                alt="Group of people partying"
+              />
+              <h1>Step 2</h1>
+              <p>
+                Stay Updated, Check out the latest news, events, and
+                announcements from the student association
+              </p>
+            </div>
+            <div class="service">
+              <img
+                src="./assets/homepage/Image3.png"
+                alt="Hands accepting information"
+              />
+              <h1>Step 3</h1>
+              <p>
+                Get Involved. Join us in organizing events, volunteering, and
+                making a difference in the university
+              </p>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
 
-    <script src="./scripts/index.js"></script>
+    <script>
+      const upButton = document.querySelector(".up-button");
+      const downButton = document.querySelector(".down-button");
+      const servicesRendered = document.querySelector(".services-rendered");
+
+      const hideServices = () => {
+        servicesRendered.style.display = "none";
+        upButton.style.display = "none";
+        downButton.style.display = "block";
+      };
+
+      const showServices = () => {
+        servicesRendered.style.display = "grid";
+        upButton.style.display = "block";
+        downButton.style.display = "none";
+      };
+    </script>
   </body>
 </html>
