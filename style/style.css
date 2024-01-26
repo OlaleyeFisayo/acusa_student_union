@@ -164,9 +164,20 @@ main {
 #services .services-content .services-rendered {
   display: grid;
   padding: 10px 0 30px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
+  gap: 40px;
   border-bottom: 1px solid rgb(66, 65, 65);
   place-items: center;
+}
+@media (min-width: 780px) {
+  #services .services-content .services-rendered {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1180px) {
+  #services .services-content .services-rendered {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 #services .services-content .services-rendered .service {
   max-width: 350px;
@@ -183,4 +194,61 @@ main {
 #services .services-content .services-rendered .service p {
   text-align: left;
   font-size: 17px;
+}
+
+#contact {
+  width: 100%;
+}
+#contact .contact-content {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  place-items: center;
+}
+#contact .form-side {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+#contact .form-side div {
+  max-width: 500px;
+  width: 100%;
+}
+#contact .form-side div h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+#contact .form-side div p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+#contact .form-side div form {
+  margin-top: 20px;
+}
+#contact .form-side div form label p {
+  padding: 0;
+  margin: 0 0 5px;
+  text-transform: capitalize;
+}
+#contact .form-side div form label input {
+  background-color: rgb(88, 86, 86);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 20px;
+  outline: none;
+  display: block;
+  width: 100%;
+  color: white;
+}
+#contact .form-side div form button {
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+  border-radius: 12px;
+  background-color: red;
+  color: white;
 }/*# sourceMappingURL=style.css.map */
