@@ -333,7 +333,7 @@ main {
       .article-container {
         .two-container {
           display: grid;
-          grid-template-columns: 50% 50%;
+          grid-template-columns: 1fr 1fr;
           justify-content: space-between;
           align-items: center;
           gap: 30px;
@@ -382,7 +382,7 @@ main {
         .one-container {
           margin-top: 20px;
           display: grid;
-          grid-template-columns: repeat(4, 20%);
+          grid-template-columns: repeat(4, 1fr);
           justify-content: space-between;
           align-items: center;
           gap: 30px;
@@ -429,5 +429,70 @@ main {
     }
   }
 }
-
 // Blog Page End
+
+// About us Page start
+#about-us {
+  width: 100%;
+
+  .about-us-content {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+
+    section {
+      text-align: center;
+      h1 {
+        font-size: 35px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .about {
+      padding: 20px 0 0;
+
+      .img {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .team {
+      padding-top: 50px;
+
+      .members-list {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 50px 0;
+
+        .member {
+          img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+          }
+
+          h1 {
+            font-size: 20px;
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+// About us Page end
